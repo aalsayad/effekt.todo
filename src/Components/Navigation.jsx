@@ -3,7 +3,7 @@ function Navigation() {
   return (
     <>
       <div className='mb-4'>
-        <div className='flex gap-1  text-[#525460] [&>p]:text-sm [&>p]:transition [&>p]:duration-300 [&>p]:cursor-pointer'>
+        <div className='flex items-center gap-[5px]  text-[var(--inactive)] [&>p]:text-sm [&>p]:transition [&>p]:duration-300 [&>p]:cursor-pointer'>
           <p className='hover:text-[#F1F1F485]'>Ideas</p>
           <span>/</span>
           <p className='hover:text-[#F1F1F485]'>Long-Form Content</p>

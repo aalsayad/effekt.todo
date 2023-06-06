@@ -1,10 +1,10 @@
 @font-face {
   font-family: NacelleLight;
-  src: url(../src//assets/Fonts/Nacelle-Light.otf);
+  src: url(../src/assets/Fonts/Nacelle-Light.otf);
 }
 @font-face {
   font-family: NacelleRegular;
-  src: url(../src//assets/Fonts/Nacelle-Regular.otf);
+  src: url(../src/assets/Fonts/Nacelle-Regular.otf);
 }
 
 :root {
@@ -13,6 +13,10 @@
   --yellow: #e7c057;
   --inactive: #525460;
   --border: #363844;
+  --light-navy: #24252e;
+  --light-navy-active: #282933;
+  --font-light: NacelleLight;
+  --font-regular: NacelleRegular;
 }
 
 *,
@@ -37,4 +41,8 @@ h5,
 h6 {
   font-family: NacelleRegular;
   font-weight: 100;
+}
+
+.font-light {
+  font-family: NacelleLight;
 }

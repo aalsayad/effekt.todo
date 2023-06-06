@@ -1,4 +1,4 @@
-import svg from '../assets/effekt-todo-logo.svg';
+import logo from '../assets/effekt-todo-logo.svg';
 import defaultPic from '../assets/sayad.jpeg';
 
 function Header() {
@@ -6,7 +6,7 @@ function Header() {
     <>
       <div className='rounded-full bg-[#E7C057] h-[300px] w-[240px] absolute -left-[55%] top-[12%] blur-[50px] opacity-10'></div>
       <div className='flex justify-between mb-10'>
-        <img src={svg} alt='effekt.todo' />
+        <img src={logo} alt='effekt.todo' />
         <div className='flex items-center gap-6'>
           <div
             style={{
