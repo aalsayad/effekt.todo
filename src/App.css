@@ -1,0 +1,40 @@
+@font-face {
+  font-family: NacelleLight;
+  src: url(../src//assets/Fonts/Nacelle-Light.otf);
+}
+@font-face {
+  font-family: NacelleRegular;
+  src: url(../src//assets/Fonts/Nacelle-Regular.otf);
+}
+
+:root {
+  --dark-grey: #1e1f26;
+  --light: #f1f1f4;
+  --yellow: #e7c057;
+  --inactive: #525460;
+  --border: #363844;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: NacelleRegular;
+  background-color: var(--dark-grey);
+  color: var(--light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: NacelleRegular;
+  font-weight: 100;
+}
