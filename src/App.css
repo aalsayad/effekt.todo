@@ -7,6 +7,10 @@
   src: url(../src/assets/Fonts/Nacelle-Regular.otf);
 }
 
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
 :root {
   --dark-grey: #1e1f26;
   --light: #f1f1f4;

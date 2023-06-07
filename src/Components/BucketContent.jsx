@@ -1,5 +1,6 @@
 import arrowBottom from '../assets/arrow-bottom.svg';
 import Task from './Task.jsx';
+import NewTask from './NewTask';
 import useStore from '../Store/Store.js';
 
 export default function BucketContent() {
@@ -13,11 +14,8 @@ export default function BucketContent() {
         </h3>
         <h3 className='cursor-pointer py-1 px-2 border-b-[1px] border-b-[var(--yellow)] text-sm'>Tasks</h3>
       </div>
-      <div className='mb-6'>
-        <button className='flex items-center text-sm py-2 px-5 rounded-[4px] bg-[var(--light-navy)] hover:bg-[var(--light-navy-active)] transition ease-in-out duration-[0.3s]'>
-          Add new task <span className='text-lg ml-2'>+</span>
-        </button>
-      </div>
+      <NewTask />
+
       <div className='flex flex-col gap-2'>
         <p className='flex items-center text-xs gap-1'>
           Pending <img src={arrowBottom} className='w-2 opacity-30' />

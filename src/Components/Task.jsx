@@ -24,12 +24,13 @@ function Task({ id, heading, description, priority, completed }) {
           <p className='text-sm opacity-[0.75] font-light'>{description}</p>
         </div>
         <span
-          className={`px-[12px] py-[6px] text-xs rounded-full
-          ${priority == 'Low Prio' && 'text-[#CEEC79] bg-[#29302C]'}
-          ${priority == 'High Prio' && 'text-[#798BEC] bg-[#2F2F37]'}
-          ${priority == 'Urgent' && 'text-[#EC9B79] bg-[#302929]'}
-          ${completed && 'text-[#E7C057] bg-[#302F29]'}
-          `}
+          className={`${
+            !completed
+              ? `${priority == 'Low Prio' ? 'text-[#CEEC79] bg-[#29302C]' : ''}
+              ${priority == 'High Prio' ? 'text-[#798BEC] bg-[#2F2F37]' : ''}
+              ${priority == 'Urgent' ? 'text-[#EC9B79] bg-[#302929]' : ''}`
+              : 'text-[#E7C057] bg-[#302F29]'
+          } px-[12px] py-[6px] text-xs rounded-full`}
         >
           {!completed ? priority : 'Completed'}
         </span>
