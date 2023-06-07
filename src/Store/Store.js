@@ -45,6 +45,23 @@ const useStore = create((set, get) => ({
       tasks: newTasks,
     }));
   },
+  addTask: (task) => {
+    const tasks = get().tasks;
+    const newTasks = [...tasks];
+    const payloadTask = { ...task, id: tasks.length + 1 };
+    newTasks.push(payloadTask);
+
+    set(() => ({
+      tasks: newTasks,
+    }));
+  },
+  deleteTask: (id) => {
+    const tasks = get().tasks;
+    const newTasks = tasks.filter((task) => task.id !== id);
+    set(() => ({
+      tasks: newTasks,
+    }));
+  },
 }));
 
 export default useStore;

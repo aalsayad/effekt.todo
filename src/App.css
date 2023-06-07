@@ -50,3 +50,8 @@ h6 {
 .font-light {
   font-family: NacelleLight;
 }
+
+input {
+  font-family: NacelleRegular;
+  color: var(--light);
+}
