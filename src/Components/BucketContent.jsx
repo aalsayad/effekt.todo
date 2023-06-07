@@ -1,6 +1,10 @@
 import arrowBottom from '../assets/arrow-bottom.svg';
+import Task from './Task.jsx';
+import useStore from '../Store/Store.js';
 
 export default function BucketContent() {
+  const tasks = useStore((state) => state.tasks);
+
   return (
     <>
       <div className='flex gap-4 border-b-[var(--border)] border-b-[1px] mb-6'>
@@ -18,18 +22,39 @@ export default function BucketContent() {
         <p className='flex items-center text-xs gap-1'>
           Pending <img src={arrowBottom} className='w-2 opacity-30' />
         </p>
-        <div className='flex items-start gap-4 py-5 px-4 pb-6 w-full min-h-[50px] bg-[var(--light-navy)] rounded-md'>
-          <div className='cursor-pointer mt-1 min-w-[16px] min-h-[16px] bg-[#2F313C] rounded-[3px]'></div>
-          <div>
-            <div className='mb-4'>
-              <h4 className='text-base mb-1'>Create the UI Design</h4>
-              <p className='text-sm opacity-[0.75] font-light'>
-                Use figma to create the UI design of the mobile app after researching other designs
-              </p>
-            </div>
-            <span className=' px-[12px] py-[6px] text-xs text-[#CEEC79] bg-[#29302C] rounded-full'>Low Prio</span>
-          </div>
-        </div>
+        {tasks.map((task) => {
+          if (!task.completed) {
+            return (
+              <Task
+                id={task.id}
+                key={task.id}
+                heading={task.heading}
+                description={task.description}
+                priority={task.priority}
+                completed={task.completed}
+              />
+            );
+          }
+        })}
+      </div>
+      <div className='flex flex-col gap-2 mt-10'>
+        <p className='flex items-center text-xs gap-1'>
+          Done <img src={arrowBottom} className='w-2 opacity-30' />
+        </p>
+        {tasks.map((task) => {
+          if (task.completed) {
+            return (
+              <Task
+                id={task.id}
+                key={task.id}
+                heading={task.heading}
+                description={task.description}
+                priority={task.priority}
+                completed={task.completed}
+              />
+            );
+          }
+        })}
       </div>
     </>
   );
