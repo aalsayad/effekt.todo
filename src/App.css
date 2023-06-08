@@ -55,3 +55,19 @@ input {
   font-family: NacelleRegular;
   color: var(--light);
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255, 0.45);
+  border-radius: 10px;
+}

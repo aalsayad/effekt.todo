@@ -14,7 +14,7 @@ function Task({ id, heading, description, priority, completed }) {
   };
 
   return (
-    <div className='relative flex items-start gap-4 p-4 px-5 pb-5 w-full min-h-[50px] bg-[var(--light-navy)] rounded-lg'>
+    <div className='overflow-hidden relative flex items-start gap-4 p-4 px-5 pb-5 w-full min-h-[50px] bg-[var(--light-navy)] rounded-lg'>
       <div
         onClick={handleCheckboxClick}
         className='flex items-center justify-center cursor-pointer mt-1 min-w-[20px] min-h-[20px] bg-[#2F313C] rounded-[3px]'
@@ -28,7 +28,7 @@ function Task({ id, heading, description, priority, completed }) {
       <div>
         <div className={` ${completed && 'line-through opacity-20'}`}>
           <h4 className={`text-base mb-1 `}>{heading}</h4>
-          <p className='text-sm opacity-[0.75] font-light'>{description}</p>
+          <p className='text-sm opacity-[0.75] font-light '>{description}</p>
         </div>
         {priority || completed ? (
           <span
