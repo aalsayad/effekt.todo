@@ -8,7 +8,6 @@ function TasksStatusGroup({ status }) {
   const tasks = useStore((state) => state.tasks);
   const [localTasks, setLocalTasks] = useState(tasks);
 
-  console.log('Rerendered');
   //Fetch tasks from local store and sort them
   useEffect(() => {
     if (status === 'Done') {
@@ -33,17 +32,16 @@ function TasksStatusGroup({ status }) {
             return (
               <motion.div
                 key={task.id}
-                initial={{ height: 0, y: 10, opacity: 0 }}
+                initial={{ height: 0, opacity: 0 }}
                 animate={{
                   height: 'auto',
-                  y: 0,
                   opacity: 1,
                 }}
-                exit={{ height: 0, y: 10, opacity: 0 }}
-                transition={{ type: 'spring', duration: 0.5, stiffness: 90, opacity: { duration: 0.2 } }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ ease: 'easeInOut', duration: 0.35 }}
+                className='overflow-hidden'
               >
                 <Task
-                  className='overflow-hidden'
                   id={task.id}
                   heading={task.heading}
                   description={task.description}

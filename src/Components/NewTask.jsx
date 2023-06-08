@@ -55,10 +55,13 @@ function NewTask() {
         {!taskModal && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'fit-content', opacity: 1 }}
+            animate={{
+              height: 'auto',
+              opacity: 1,
+            }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ type: 'spring', duration: 0.5, stiffness: 90, opacity: { duration: 0.2 } }}
-            className='h-fit overflow-hidden'
+            transition={{ ease: 'easeInOut', duration: 0.35 }}
+            className='overflow-hidden'
           >
             <div className='mb-6'>
               <button
@@ -76,10 +79,13 @@ function NewTask() {
         {taskModal && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'fit-content', opacity: 1 }}
+            animate={{
+              height: 'auto',
+              opacity: 1,
+            }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ type: 'spring', duration: 0.5, stiffness: 50, opacity: { duration: 0.2 } }}
-            className='h-fit overflow-hidden'
+            transition={{ ease: 'easeInOut', duration: 0.35 }}
+            className='overflow-hidden'
           >
             <div className='overflow-hidden flex items-start gap-6 p-5 w-full bg-[var(--light-navy)] rounded-lg'>
               <form className=' w-full flex flex-col gap-[10px]'>
